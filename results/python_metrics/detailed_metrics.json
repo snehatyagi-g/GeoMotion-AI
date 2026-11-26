@@ -1,0 +1,1354 @@
+{
+  "project": "GeoMotion AI",
+  "phase": "Phase 3 Python migration",
+  "generated_at_utc": "2026-11-03T15:24:55.768040+00:00",
+  "benchmark": "data/processed/synthetic_v2",
+  "benchmark_type": "synthetic; generator-defined labels",
+  "evaluation_split": "test",
+  "validation_split": "validation",
+  "training_split": "train",
+  "training_used_for_fitting": false,
+  "test_tuning_or_selection_used": false,
+  "test_observation_keys_identical_for_all_algorithms": true,
+  "test_observations_labels_and_networks_loaded_after_validation_selection": true,
+  "eligible_test_observations_per_algorithm": {
+    "Nearest Road": 12944,
+    "HMM/Viterbi": 12944,
+    "Adaptive Radius": 12944
+  },
+  "unique_eligible_test_keys": 12944,
+  "radius_label_files_loaded_by_matchers": false,
+  "radius_target_diagnostic_used_for_tuning": false,
+  "test_elapsed_wall_ms_all_methods": 11063.17300000228,
+  "validation_tuning": {
+    "score": "mean trajectory edge accuracy, equally weighted by scenario/interval trajectory",
+    "hmm": {
+      "selected": {
+        "parameters": {
+          "candidateSigmaMultiplier": 4,
+          "maxCandidates": 8,
+          "transitionBetaMultiplier": 1
+        },
+        "validation_mean_trajectory_accuracy": 0.9316539115646262,
+        "validation_candidate_count_mean": 2.8114184177997528
+      },
+      "trials": [
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 1.96,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 1
+          },
+          "validation_mean_trajectory_accuracy": 0.9103188775510206,
+          "validation_candidate_count_mean": 1.558791718170581
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 1.96,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 2
+          },
+          "validation_mean_trajectory_accuracy": 0.9078635204081634,
+          "validation_candidate_count_mean": 1.558791718170581
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 1.96,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 4
+          },
+          "validation_mean_trajectory_accuracy": 0.9071789965986398,
+          "validation_candidate_count_mean": 1.558791718170581
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 2.5,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 1
+          },
+          "validation_mean_trajectory_accuracy": 0.9216432823129254,
+          "validation_candidate_count_mean": 1.8758498145859086
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 2.5,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 2
+          },
+          "validation_mean_trajectory_accuracy": 0.918369472789116,
+          "validation_candidate_count_mean": 1.8758498145859086
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 2.5,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 4
+          },
+          "validation_mean_trajectory_accuracy": 0.9175212585034017,
+          "validation_candidate_count_mean": 1.8758498145859086
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 3,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 1
+          },
+          "validation_mean_trajectory_accuracy": 0.9262372448979594,
+          "validation_candidate_count_mean": 2.1885815822002472
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 3,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 2
+          },
+          "validation_mean_trajectory_accuracy": 0.922933673469388,
+          "validation_candidate_count_mean": 2.1885815822002472
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 3,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 4
+          },
+          "validation_mean_trajectory_accuracy": 0.9218176020408168,
+          "validation_candidate_count_mean": 2.1885815822002472
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 4,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 1
+          },
+          "validation_mean_trajectory_accuracy": 0.9316539115646262,
+          "validation_candidate_count_mean": 2.8114184177997528
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 4,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 2
+          },
+          "validation_mean_trajectory_accuracy": 0.9283801020408167,
+          "validation_candidate_count_mean": 2.8114184177997528
+        },
+        {
+          "parameters": {
+            "candidateSigmaMultiplier": 4,
+            "maxCandidates": 8,
+            "transitionBetaMultiplier": 4
+          },
+          "validation_mean_trajectory_accuracy": 0.9278295068027215,
+          "validation_candidate_count_mean": 2.8114184177997528
+        }
+      ]
+    },
+    "adaptive_radius": {
+      "selected": {
+        "parameters": {
+          "sigmaMultiplier": 2.3,
+          "densityWeight": 0.55,
+          "layerWeight": 0.75,
+          "parallelAmbiguitySigma": 1,
+          "headingWeight": 0.2,
+          "transitionWeight": 0.35
+        },
+        "validation_mean_trajectory_accuracy": 0.9192134353741502,
+        "validation_candidate_count_mean": 2.6864184177997528
+      },
+      "trials": [
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9181037414965988,
+          "validation_candidate_count_mean": 1.587685414091471
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9174043367346941,
+          "validation_candidate_count_mean": 1.627317676143387
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9163031462585037,
+          "validation_candidate_count_mean": 1.6844097651421508
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.918369472789116,
+          "validation_candidate_count_mean": 1.8853522867737948
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9179230442176874,
+          "validation_candidate_count_mean": 1.9040482076637824
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9170450680272113,
+          "validation_candidate_count_mean": 1.9407447466007417
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9168792517006807,
+          "validation_candidate_count_mean": 2.217088998763906
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9164179421768713,
+          "validation_candidate_count_mean": 2.227441285537701
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.5,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9170259353741501,
+          "validation_candidate_count_mean": 2.248300370828183
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9182206632653066,
+          "validation_candidate_count_mean": 1.8327410383189122
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9177295918367351,
+          "validation_candidate_count_mean": 1.8484239802224969
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9172087585034018,
+          "validation_candidate_count_mean": 1.8812577255871445
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9169536564625856,
+          "validation_candidate_count_mean": 2.173053152039555
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.916477465986395,
+          "validation_candidate_count_mean": 2.181396786155748
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9170556972789121,
+          "validation_candidate_count_mean": 2.199242892459827
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9160884353741502,
+          "validation_candidate_count_mean": 2.4826174289245984
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9156420068027217,
+          "validation_candidate_count_mean": 2.486171199011125
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 1.96,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9156420068027217,
+          "validation_candidate_count_mean": 2.4955964153275647
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9171471088435379,
+          "validation_candidate_count_mean": 2.0431860321384425
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9166709183673474,
+          "validation_candidate_count_mean": 2.0516841779975277
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.15,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9172640306122454,
+          "validation_candidate_count_mean": 2.0703028430160693
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9156420068027217,
+          "validation_candidate_count_mean": 2.366965389369592
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.915195578231293,
+          "validation_candidate_count_mean": 2.370519159456119
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.35,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.915195578231293,
+          "validation_candidate_count_mean": 2.379789864029666
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9192134353741502,
+          "validation_candidate_count_mean": 2.6864184177997528
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 1.5,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9192134353741502,
+          "validation_candidate_count_mean": 2.6879635352286773
+        },
+        {
+          "parameters": {
+            "sigmaMultiplier": 2.3,
+            "densityWeight": 0.55,
+            "layerWeight": 0.75,
+            "parallelAmbiguitySigma": 2,
+            "headingWeight": 0.2,
+            "transitionWeight": 0.35
+          },
+          "validation_mean_trajectory_accuracy": 0.9192134353741502,
+          "validation_candidate_count_mean": 2.6926761433868975
+        }
+      ]
+    }
+  },
+  "metric_definitions": {
+    "micro_precision_recall_f1": "Single-label multiclass micro scores; equal to edge accuracy.",
+    "mean_matching_distance_m": "Metric distance from noisy observation to predicted road edge, not true-coordinate error.",
+    "trajectory_accuracy_mean": "Mean per-track pointwise edge accuracy.",
+    "processing_ms_per_observation": "Matcher wall time per observation; excludes input loading/network construction."
+  },
+  "test_results": {
+    "overall": [
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 12944,
+          "trajectories": 112,
+          "edge_accuracy": 0.8687422744128553,
+          "edge_precision_micro": 0.8687422744128553,
+          "edge_recall_micro": 0.8687422744128553,
+          "edge_f1_micro": 0.8687422744128553,
+          "edge_precision_macro": 0.37585552063054145,
+          "edge_recall_macro": 0.34154061601940694,
+          "edge_f1_macro": 0.3560699302624421,
+          "mean_matching_distance_m": 12.615721449890865,
+          "trajectory_accuracy_mean": 0.8376934523809524,
+          "trajectory_exact_match_rate": 0.0625,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.24818044653977453
+        }
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 12944,
+          "trajectories": 112,
+          "edge_accuracy": 0.9402812113720643,
+          "edge_precision_micro": 0.9402812113720643,
+          "edge_recall_micro": 0.9402812113720643,
+          "edge_f1_micro": 0.9402812113720643,
+          "edge_precision_macro": 0.6136378417734126,
+          "edge_recall_macro": 0.5986496579307268,
+          "edge_f1_macro": 0.6051590819162251,
+          "mean_matching_distance_m": 14.81752089223468,
+          "trajectory_accuracy_mean": 0.9201785714285714,
+          "trajectory_exact_match_rate": 0.24107142857142858,
+          "candidate_count_mean": 3.035228677379481,
+          "processing_ms_per_observation": 0.2965522095164451
+        }
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 12944,
+          "trajectories": 112,
+          "edge_accuracy": 0.8909147095179234,
+          "edge_precision_micro": 0.8909147095179234,
+          "edge_recall_micro": 0.8909147095179234,
+          "edge_f1_micro": 0.8909147095179234,
+          "edge_precision_macro": 0.5285385740499507,
+          "edge_recall_macro": 0.5151933088523434,
+          "edge_f1_macro": 0.5204282971082521,
+          "mean_matching_distance_m": 15.440408509825557,
+          "trajectory_accuracy_mean": 0.9120259353741501,
+          "trajectory_exact_match_rate": 0.32142857142857145,
+          "candidate_count_mean": 2.9231304079110014,
+          "processing_ms_per_observation": 0.29991436959210366
+        }
+      }
+    ],
+    "by_context": [
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.9054388133498146,
+          "edge_precision_micro": 0.9054388133498146,
+          "edge_recall_micro": 0.9054388133498146,
+          "edge_f1_micro": 0.9054388133498146,
+          "edge_precision_macro": 0.4173809582349966,
+          "edge_recall_macro": 0.3974970584463912,
+          "edge_f1_macro": 0.4066274059701128,
+          "mean_matching_distance_m": 13.864304476136166,
+          "trajectory_accuracy_mean": 0.8742176870748299,
+          "trajectory_exact_match_rate": 0.07142857142857142,
+          "candidate_count_mean": 48.0,
+          "processing_ms_per_observation": 0.18939663164609366
+        },
+        "context": "airport_multilevel"
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.803770086526576,
+          "edge_precision_micro": 0.803770086526576,
+          "edge_recall_micro": 0.803770086526576,
+          "edge_f1_micro": 0.803770086526576,
+          "edge_precision_macro": 0.24575511740323724,
+          "edge_recall_macro": 0.20289562886011697,
+          "edge_f1_macro": 0.22027864670038558,
+          "mean_matching_distance_m": 10.588450415591797,
+          "trajectory_accuracy_mean": 0.7850680272108843,
+          "trajectory_exact_match_rate": 0.07142857142857142,
+          "candidate_count_mean": 112.0,
+          "processing_ms_per_observation": 0.47127836836080855
+        },
+        "context": "complex_intersection"
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.9335599505562423,
+          "edge_precision_micro": 0.9335599505562423,
+          "edge_recall_micro": 0.9335599505562423,
+          "edge_f1_micro": 0.9335599505562423,
+          "edge_precision_macro": 0.742326126890537,
+          "edge_recall_macro": 0.7298797734234932,
+          "edge_f1_macro": 0.7356051789234479,
+          "mean_matching_distance_m": 13.936544210511405,
+          "trajectory_accuracy_mean": 0.8858333333333333,
+          "trajectory_exact_match_rate": 0.03571428571428571,
+          "candidate_count_mean": 40.0,
+          "processing_ms_per_observation": 0.15250812731570912
+        },
+        "context": "open_highway"
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.8322002472187886,
+          "edge_precision_micro": 0.8322002472187886,
+          "edge_recall_micro": 0.8322002472187886,
+          "edge_f1_micro": 0.8322002472187886,
+          "edge_precision_macro": 0.3578096313138665,
+          "edge_recall_macro": 0.3133192938840235,
+          "edge_f1_macro": 0.33246819015209006,
+          "mean_matching_distance_m": 12.07358669732426,
+          "trajectory_accuracy_mean": 0.8056547619047619,
+          "trajectory_exact_match_rate": 0.07142857142857142,
+          "candidate_count_mean": 46.0,
+          "processing_ms_per_observation": 0.1795386588364305
+        },
+        "context": "urban_canyon"
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.9487021013597033,
+          "edge_precision_micro": 0.9487021013597033,
+          "edge_recall_micro": 0.9487021013597033,
+          "edge_f1_micro": 0.9487021013597033,
+          "edge_precision_macro": 0.6691386811068963,
+          "edge_recall_macro": 0.6607109571361821,
+          "edge_f1_macro": 0.664155729546647,
+          "mean_matching_distance_m": 14.96420736038669,
+          "trajectory_accuracy_mean": 0.930612244897959,
+          "trajectory_exact_match_rate": 0.25,
+          "candidate_count_mean": 2.6946847960444993,
+          "processing_ms_per_observation": 0.22187240420099633
+        },
+        "context": "airport_multilevel"
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.9258343634116193,
+          "edge_precision_micro": 0.9258343634116193,
+          "edge_recall_micro": 0.9258343634116193,
+          "edge_f1_micro": 0.9258343634116193,
+          "edge_precision_macro": 0.4920001181975896,
+          "edge_recall_macro": 0.46916607968815277,
+          "edge_f1_macro": 0.4790252269681201,
+          "mean_matching_distance_m": 14.59344489000355,
+          "trajectory_accuracy_mean": 0.9177976190476193,
+          "trajectory_exact_match_rate": 0.35714285714285715,
+          "candidate_count_mean": 4.34487021013597,
+          "processing_ms_per_observation": 0.5520990420239811
+        },
+        "context": "complex_intersection"
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.9499381953028431,
+          "edge_precision_micro": 0.9499381953028431,
+          "edge_recall_micro": 0.9499381953028431,
+          "edge_f1_micro": 0.9499381953028431,
+          "edge_precision_macro": 0.8328054320408522,
+          "edge_recall_macro": 0.8213828947198346,
+          "edge_f1_macro": 0.8261459072891817,
+          "mean_matching_distance_m": 14.492199513093627,
+          "trajectory_accuracy_mean": 0.9132397959183673,
+          "trajectory_exact_match_rate": 0.10714285714285714,
+          "candidate_count_mean": 1.5834363411619283,
+          "processing_ms_per_observation": 0.16418389987612778
+        },
+        "context": "open_highway"
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.9366501854140915,
+          "edge_precision_micro": 0.9366501854140915,
+          "edge_recall_micro": 0.9366501854140915,
+          "edge_f1_micro": 0.9366501854140915,
+          "edge_precision_macro": 0.5591094260650741,
+          "edge_recall_macro": 0.5452226743786212,
+          "edge_f1_macro": 0.5516331643149865,
+          "mean_matching_distance_m": 15.220231805454835,
+          "trajectory_accuracy_mean": 0.91906462585034,
+          "trajectory_exact_match_rate": 0.25,
+          "candidate_count_mean": 3.5179233621755253,
+          "processing_ms_per_observation": 0.24805349196465848
+        },
+        "context": "urban_canyon"
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.8995673671199012,
+          "edge_precision_micro": 0.8995673671199012,
+          "edge_recall_micro": 0.8995673671199012,
+          "edge_f1_micro": 0.8995673671199012,
+          "edge_precision_macro": 0.5559033310189739,
+          "edge_recall_macro": 0.5439126403976842,
+          "edge_f1_macro": 0.5483128996958425,
+          "mean_matching_distance_m": 15.621712366645145,
+          "trajectory_accuracy_mean": 0.9217006802721087,
+          "trajectory_exact_match_rate": 0.32142857142857145,
+          "candidate_count_mean": 2.442521631644005,
+          "processing_ms_per_observation": 0.23293810259452638
+        },
+        "context": "airport_multilevel"
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.884734239802225,
+          "edge_precision_micro": 0.884734239802225,
+          "edge_recall_micro": 0.884734239802225,
+          "edge_f1_micro": 0.884734239802225,
+          "edge_precision_macro": 0.4128892897444745,
+          "edge_recall_macro": 0.39392817549821957,
+          "edge_f1_macro": 0.40219483369168807,
+          "mean_matching_distance_m": 15.010240152004375,
+          "trajectory_accuracy_mean": 0.8861224489795917,
+          "trajectory_exact_match_rate": 0.32142857142857145,
+          "candidate_count_mean": 4.6418417799752785,
+          "processing_ms_per_observation": 0.5180577564885066
+        },
+        "context": "complex_intersection"
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.9174907292954264,
+          "edge_precision_micro": 0.9174907292954264,
+          "edge_recall_micro": 0.9174907292954264,
+          "edge_f1_micro": 0.9174907292954264,
+          "edge_precision_macro": 0.7738701625243373,
+          "edge_recall_macro": 0.7755840115403719,
+          "edge_f1_macro": 0.7734729952524605,
+          "mean_matching_distance_m": 15.271638909353392,
+          "trajectory_accuracy_mean": 0.9423384353741496,
+          "trajectory_exact_match_rate": 0.39285714285714285,
+          "candidate_count_mean": 1.4493201483312732,
+          "processing_ms_per_observation": 0.19125395549809424
+        },
+        "context": "open_highway"
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 3236,
+          "trajectories": 28,
+          "edge_accuracy": 0.8618665018541409,
+          "edge_precision_micro": 0.8618665018541409,
+          "edge_recall_micro": 0.8618665018541409,
+          "edge_f1_micro": 0.8618665018541409,
+          "edge_precision_macro": 0.487077828094178,
+          "edge_recall_macro": 0.46966989067350917,
+          "edge_f1_macro": 0.4766863801484293,
+          "mean_matching_distance_m": 15.858042611299341,
+          "trajectory_accuracy_mean": 0.8979421768707481,
+          "trajectory_exact_match_rate": 0.25,
+          "candidate_count_mean": 3.1588380716934488,
+          "processing_ms_per_observation": 0.2574076637873651
+        },
+        "context": "urban_canyon"
+      }
+    ],
+    "by_noise": [
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 6472,
+          "trajectories": 56,
+          "edge_accuracy": 0.7710135970333746,
+          "edge_precision_micro": 0.7710135970333746,
+          "edge_recall_micro": 0.7710135970333746,
+          "edge_f1_micro": 0.7710135970333746,
+          "edge_precision_macro": 0.27634311797509853,
+          "edge_recall_macro": 0.22979232642267478,
+          "edge_f1_macro": 0.24916222472163732,
+          "mean_matching_distance_m": 20.6419496015044,
+          "trajectory_accuracy_mean": 0.7439838435374148,
+          "trajectory_exact_match_rate": 0.017857142857142856,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.23603677379488314
+        },
+        "noise_tier": "high"
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 6472,
+          "trajectories": 56,
+          "edge_accuracy": 0.9664709517923362,
+          "edge_precision_micro": 0.9664709517923362,
+          "edge_recall_micro": 0.9664709517923362,
+          "edge_f1_micro": 0.9664709517923362,
+          "edge_precision_macro": 0.5686047690172107,
+          "edge_recall_macro": 0.5579900057788427,
+          "edge_f1_macro": 0.5631434139676058,
+          "mean_matching_distance_m": 4.58949329827739,
+          "trajectory_accuracy_mean": 0.9314030612244891,
+          "trajectory_exact_match_rate": 0.10714285714285714,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.2603241192846414
+        },
+        "noise_tier": "low"
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 6472,
+          "trajectories": 56,
+          "edge_accuracy": 0.9001854140914709,
+          "edge_precision_micro": 0.9001854140914709,
+          "edge_recall_micro": 0.9001854140914709,
+          "edge_f1_micro": 0.9001854140914709,
+          "edge_precision_macro": 0.48200927895131446,
+          "edge_recall_macro": 0.46048882590871104,
+          "edge_f1_macro": 0.4697500461200368,
+          "mean_matching_distance_m": 24.97457052937153,
+          "trajectory_accuracy_mean": 0.8817389455782308,
+          "trajectory_exact_match_rate": 0.16071428571428573,
+          "candidate_count_mean": 4.733312731767614,
+          "processing_ms_per_observation": 0.3223416409142379
+        },
+        "noise_tier": "high"
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 6472,
+          "trajectories": 56,
+          "edge_accuracy": 0.9803770086526576,
+          "edge_precision_micro": 0.9803770086526576,
+          "edge_recall_micro": 0.9803770086526576,
+          "edge_f1_micro": 0.9803770086526576,
+          "edge_precision_macro": 0.8301321885202855,
+          "edge_recall_macro": 0.8258878684932517,
+          "edge_f1_macro": 0.8278713118441671,
+          "mean_matching_distance_m": 4.660471255097815,
+          "trajectory_accuracy_mean": 0.9586181972789113,
+          "trajectory_exact_match_rate": 0.32142857142857145,
+          "candidate_count_mean": 1.3371446229913473,
+          "processing_ms_per_observation": 0.27076277811865074
+        },
+        "noise_tier": "low"
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 6472,
+          "trajectories": 56,
+          "edge_accuracy": 0.8063967861557478,
+          "edge_precision_micro": 0.8063967861557478,
+          "edge_recall_micro": 0.8063967861557478,
+          "edge_f1_micro": 0.8063967861557478,
+          "edge_precision_macro": 0.3667112002399698,
+          "edge_recall_macro": 0.34821096495577264,
+          "edge_f1_macro": 0.35541205567041995,
+          "mean_matching_distance_m": 26.18836449012511,
+          "trajectory_accuracy_mean": 0.8434736394557819,
+          "trajectory_exact_match_rate": 0.125,
+          "candidate_count_mean": 4.512051915945612,
+          "processing_ms_per_observation": 0.315479650803393
+        },
+        "noise_tier": "high"
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 6472,
+          "trajectories": 56,
+          "edge_accuracy": 0.9754326328800988,
+          "edge_precision_micro": 0.9754326328800988,
+          "edge_recall_micro": 0.9754326328800988,
+          "edge_f1_micro": 0.9754326328800988,
+          "edge_precision_macro": 0.8588437616895015,
+          "edge_recall_macro": 0.8560202847508236,
+          "edge_f1_macro": 0.857242269358075,
+          "mean_matching_distance_m": 4.69245252952595,
+          "trajectory_accuracy_mean": 0.9805782312925171,
+          "trajectory_exact_match_rate": 0.5178571428571429,
+          "candidate_count_mean": 1.3342088998763906,
+          "processing_ms_per_observation": 0.2843490883808627
+        },
+        "noise_tier": "low"
+      }
+    ],
+    "by_sampling_interval": [
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 9600,
+          "trajectories": 16,
+          "edge_accuracy": 0.8721875,
+          "edge_precision_micro": 0.8721875,
+          "edge_recall_micro": 0.8721875,
+          "edge_f1_micro": 0.8721875,
+          "edge_precision_macro": 0.3993629519434754,
+          "edge_recall_macro": 0.36397451519652646,
+          "edge_f1_macro": 0.37889096003063716,
+          "mean_matching_distance_m": 12.632297773582945,
+          "trajectory_accuracy_mean": 0.8721875,
+          "trajectory_exact_match_rate": 0.0,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.2501793541675241
+        },
+        "sampling_interval_s": 1
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 1920,
+          "trajectories": 16,
+          "edge_accuracy": 0.8760416666666667,
+          "edge_precision_micro": 0.8760416666666667,
+          "edge_recall_micro": 0.8760416666666667,
+          "edge_f1_micro": 0.8760416666666667,
+          "edge_precision_macro": 0.5374494084320762,
+          "edge_recall_macro": 0.48952864820768727,
+          "edge_f1_macro": 0.5089132016906596,
+          "mean_matching_distance_m": 12.827372180016953,
+          "trajectory_accuracy_mean": 0.8760416666666666,
+          "trajectory_exact_match_rate": 0.0,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.2453925520815868
+        },
+        "sampling_interval_s": 5
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 640,
+          "trajectories": 16,
+          "edge_accuracy": 0.840625,
+          "edge_precision_micro": 0.840625,
+          "edge_recall_micro": 0.840625,
+          "edge_f1_micro": 0.840625,
+          "edge_precision_macro": 0.6682539682539681,
+          "edge_recall_macro": 0.5908925318761381,
+          "edge_f1_macro": 0.6160607758968412,
+          "mean_matching_distance_m": 12.36671701579885,
+          "trajectory_accuracy_mean": 0.840625,
+          "trajectory_exact_match_rate": 0.0,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.2541278125079316
+        },
+        "sampling_interval_s": 15
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 320,
+          "trajectories": 16,
+          "edge_accuracy": 0.85,
+          "edge_precision_micro": 0.85,
+          "edge_recall_micro": 0.85,
+          "edge_f1_micro": 0.85,
+          "edge_precision_macro": 0.756728778467909,
+          "edge_recall_macro": 0.6904761904761907,
+          "edge_f1_macro": 0.7106477373558117,
+          "mean_matching_distance_m": 12.471891678071252,
+          "trajectory_accuracy_mean": 0.8500000000000001,
+          "trajectory_exact_match_rate": 0.0625,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.23266468751899083
+        },
+        "sampling_interval_s": 30
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 224,
+          "trajectories": 16,
+          "edge_accuracy": 0.84375,
+          "edge_precision_micro": 0.84375,
+          "edge_recall_micro": 0.84375,
+          "edge_f1_micro": 0.84375,
+          "edge_precision_macro": 0.7770562770562771,
+          "edge_recall_macro": 0.7045454545454546,
+          "edge_f1_macro": 0.7238095238095242,
+          "mean_matching_distance_m": 12.428883623907666,
+          "trajectory_accuracy_mean": 0.84375,
+          "trajectory_exact_match_rate": 0.1875,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.21731830354708262
+        },
+        "sampling_interval_s": 45
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 160,
+          "trajectories": 16,
+          "edge_accuracy": 0.80625,
+          "edge_precision_micro": 0.80625,
+          "edge_recall_micro": 0.80625,
+          "edge_f1_micro": 0.80625,
+          "edge_precision_macro": 0.7464788732394366,
+          "edge_recall_macro": 0.6795774647887324,
+          "edge_f1_macro": 0.6971830985915494,
+          "mean_matching_distance_m": 11.54650126749996,
+          "trajectory_accuracy_mean": 0.8062500000000001,
+          "trajectory_exact_match_rate": 0.0625,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.21783437498470448
+        },
+        "sampling_interval_s": 60
+      },
+      {
+        "algorithm": "Nearest Road",
+        "metrics": {
+          "observations": 80,
+          "trajectories": 16,
+          "edge_accuracy": 0.775,
+          "edge_precision_micro": 0.775,
+          "edge_recall_micro": 0.775,
+          "edge_f1_micro": 0.775,
+          "edge_precision_macro": 0.6326530612244898,
+          "edge_recall_macro": 0.6326530612244898,
+          "edge_f1_macro": 0.6326530612244898,
+          "mean_matching_distance_m": 10.775885921366921,
+          "trajectory_accuracy_mean": 0.775,
+          "trajectory_exact_match_rate": 0.125,
+          "candidate_count_mean": 61.5,
+          "processing_ms_per_observation": 0.23681125003349734
+        },
+        "sampling_interval_s": 120
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 9600,
+          "trajectories": 16,
+          "edge_accuracy": 0.9422916666666666,
+          "edge_precision_micro": 0.9422916666666666,
+          "edge_recall_micro": 0.9422916666666666,
+          "edge_f1_micro": 0.9422916666666666,
+          "edge_precision_macro": 0.6487625852673451,
+          "edge_recall_macro": 0.6309324589430104,
+          "edge_f1_macro": 0.6381308687850684,
+          "mean_matching_distance_m": 14.901438707976249,
+          "trajectory_accuracy_mean": 0.9422916666666665,
+          "trajectory_exact_match_rate": 0.0,
+          "candidate_count_mean": 3.0309375,
+          "processing_ms_per_observation": 0.2969736458339962
+        },
+        "sampling_interval_s": 1
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 1920,
+          "trajectories": 16,
+          "edge_accuracy": 0.9427083333333334,
+          "edge_precision_micro": 0.9427083333333334,
+          "edge_recall_micro": 0.9427083333333334,
+          "edge_f1_micro": 0.9427083333333334,
+          "edge_precision_macro": 0.8555848015503588,
+          "edge_recall_macro": 0.8379162339793464,
+          "edge_f1_macro": 0.8438915389937555,
+          "mean_matching_distance_m": 14.751576285203583,
+          "trajectory_accuracy_mean": 0.9427083333333333,
+          "trajectory_exact_match_rate": 0.0625,
+          "candidate_count_mean": 3.041145833333333,
+          "processing_ms_per_observation": 0.2919777604158035
+        },
+        "sampling_interval_s": 5
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 640,
+          "trajectories": 16,
+          "edge_accuracy": 0.93125,
+          "edge_precision_micro": 0.93125,
+          "edge_recall_micro": 0.93125,
+          "edge_f1_micro": 0.93125,
+          "edge_precision_macro": 0.8904240528328118,
+          "edge_recall_macro": 0.873965936739659,
+          "edge_f1_macro": 0.876906224351479,
+          "mean_matching_distance_m": 14.943053012369145,
+          "trajectory_accuracy_mean": 0.9312499999999999,
+          "trajectory_exact_match_rate": 0.125,
+          "candidate_count_mean": 3.0671875,
+          "processing_ms_per_observation": 0.33483390621427134
+        },
+        "sampling_interval_s": 15
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 320,
+          "trajectories": 16,
+          "edge_accuracy": 0.925,
+          "edge_precision_micro": 0.925,
+          "edge_recall_micro": 0.925,
+          "edge_f1_micro": 0.925,
+          "edge_precision_macro": 0.9116915422885573,
+          "edge_recall_macro": 0.893034825870647,
+          "edge_f1_macro": 0.8936034115138591,
+          "mean_matching_distance_m": 13.869946786849747,
+          "trajectory_accuracy_mean": 0.925,
+          "trajectory_exact_match_rate": 0.3125,
+          "candidate_count_mean": 3.040625,
+          "processing_ms_per_observation": 0.28405874999180014
+        },
+        "sampling_interval_s": 30
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 224,
+          "trajectories": 16,
+          "edge_accuracy": 0.9375,
+          "edge_precision_micro": 0.9375,
+          "edge_recall_micro": 0.9375,
+          "edge_f1_micro": 0.9375,
+          "edge_precision_macro": 0.9393939393939394,
+          "edge_recall_macro": 0.9166666666666666,
+          "edge_f1_macro": 0.9143939393939396,
+          "mean_matching_distance_m": 14.106045808035248,
+          "trajectory_accuracy_mean": 0.9375,
+          "trajectory_exact_match_rate": 0.4375,
+          "candidate_count_mean": 2.9732142857142856,
+          "processing_ms_per_observation": 0.2600678571330456
+        },
+        "sampling_interval_s": 45
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 160,
+          "trajectories": 16,
+          "edge_accuracy": 0.9,
+          "edge_precision_micro": 0.9,
+          "edge_recall_micro": 0.9,
+          "edge_f1_micro": 0.9,
+          "edge_precision_macro": 0.896,
+          "edge_recall_macro": 0.856,
+          "edge_f1_macro": 0.8613333333333334,
+          "mean_matching_distance_m": 13.75429951236263,
+          "trajectory_accuracy_mean": 0.9000000000000002,
+          "trajectory_exact_match_rate": 0.375,
+          "candidate_count_mean": 3.06875,
+          "processing_ms_per_observation": 0.25815125002282
+        },
+        "sampling_interval_s": 60
+      },
+      {
+        "algorithm": "HMM/Viterbi",
+        "metrics": {
+          "observations": 80,
+          "trajectories": 16,
+          "edge_accuracy": 0.8625,
+          "edge_precision_micro": 0.8625,
+          "edge_recall_micro": 0.8625,
+          "edge_f1_micro": 0.8625,
+          "edge_precision_macro": 0.7582417582417582,
+          "edge_recall_macro": 0.7582417582417582,
+          "edge_f1_macro": 0.7582417582417582,
+          "mean_matching_distance_m": 13.234666027956612,
+          "trajectory_accuracy_mean": 0.8625000000000002,
+          "trajectory_exact_match_rate": 0.375,
+          "candidate_count_mean": 3.2375,
+          "processing_ms_per_observation": 0.27844500000355765
+        },
+        "sampling_interval_s": 120
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 9600,
+          "trajectories": 16,
+          "edge_accuracy": 0.87875,
+          "edge_precision_micro": 0.87875,
+          "edge_recall_micro": 0.87875,
+          "edge_f1_micro": 0.87875,
+          "edge_precision_macro": 0.5585353064977994,
+          "edge_recall_macro": 0.5425455998052915,
+          "edge_f1_macro": 0.5484698926690169,
+          "mean_matching_distance_m": 15.709638343294694,
+          "trajectory_accuracy_mean": 0.8787499999999999,
+          "trajectory_exact_match_rate": 0.0,
+          "candidate_count_mean": 2.9184375,
+          "processing_ms_per_observation": 0.30345637500012773
+        },
+        "sampling_interval_s": 1
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 1920,
+          "trajectories": 16,
+          "edge_accuracy": 0.9317708333333333,
+          "edge_precision_micro": 0.9317708333333333,
+          "edge_recall_micro": 0.9317708333333333,
+          "edge_f1_micro": 0.9317708333333333,
+          "edge_precision_macro": 0.8524828755296313,
+          "edge_recall_macro": 0.8401460548105121,
+          "edge_f1_macro": 0.8424027550909339,
+          "mean_matching_distance_m": 15.041837598170067,
+          "trajectory_accuracy_mean": 0.9317708333333331,
+          "trajectory_exact_match_rate": 0.0625,
+          "candidate_count_mean": 2.9213541666666667,
+          "processing_ms_per_observation": 0.2964514583330512
+        },
+        "sampling_interval_s": 5
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 640,
+          "trajectories": 16,
+          "edge_accuracy": 0.915625,
+          "edge_precision_micro": 0.915625,
+          "edge_recall_micro": 0.915625,
+          "edge_f1_micro": 0.915625,
+          "edge_precision_macro": 0.8453712953712952,
+          "edge_recall_macro": 0.8224941724941722,
+          "edge_f1_macro": 0.827795980243532,
+          "mean_matching_distance_m": 14.661835994795354,
+          "trajectory_accuracy_mean": 0.915625,
+          "trajectory_exact_match_rate": 0.25,
+          "candidate_count_mean": 2.9546875,
+          "processing_ms_per_observation": 0.2947059374946548
+        },
+        "sampling_interval_s": 15
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 320,
+          "trajectories": 16,
+          "edge_accuracy": 0.93125,
+          "edge_precision_micro": 0.93125,
+          "edge_recall_micro": 0.93125,
+          "edge_f1_micro": 0.93125,
+          "edge_precision_macro": 0.9319338422391859,
+          "edge_recall_macro": 0.9185750636132317,
+          "edge_f1_macro": 0.9167938931297708,
+          "mean_matching_distance_m": 13.774186644795297,
+          "trajectory_accuracy_mean": 0.93125,
+          "trajectory_exact_match_rate": 0.3125,
+          "candidate_count_mean": 2.909375,
+          "processing_ms_per_observation": 0.27842593751756795
+        },
+        "sampling_interval_s": 30
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 224,
+          "trajectories": 16,
+          "edge_accuracy": 0.9017857142857143,
+          "edge_precision_micro": 0.9017857142857143,
+          "edge_recall_micro": 0.9017857142857143,
+          "edge_f1_micro": 0.9017857142857143,
+          "edge_precision_macro": 0.8649635036496351,
+          "edge_recall_macro": 0.8394160583941606,
+          "edge_f1_macro": 0.8403892944038932,
+          "mean_matching_distance_m": 14.262627471518725,
+          "trajectory_accuracy_mean": 0.9017857142857144,
+          "trajectory_exact_match_rate": 0.375,
+          "candidate_count_mean": 2.888392857142857,
+          "processing_ms_per_observation": 0.24676919643492742
+        },
+        "sampling_interval_s": 45
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 160,
+          "trajectories": 16,
+          "edge_accuracy": 0.9375,
+          "edge_precision_micro": 0.9375,
+          "edge_recall_micro": 0.9375,
+          "edge_f1_micro": 0.9375,
+          "edge_precision_macro": 0.9375,
+          "edge_recall_macro": 0.9166666666666666,
+          "edge_f1_macro": 0.9166666666666667,
+          "mean_matching_distance_m": 13.79578439601504,
+          "trajectory_accuracy_mean": 0.9375,
+          "trajectory_exact_match_rate": 0.625,
+          "candidate_count_mean": 3.01875,
+          "processing_ms_per_observation": 0.2850231249794888
+        },
+        "sampling_interval_s": 60
+      },
+      {
+        "algorithm": "Adaptive Radius",
+        "metrics": {
+          "observations": 80,
+          "trajectories": 16,
+          "edge_accuracy": 0.8875,
+          "edge_precision_micro": 0.8875,
+          "edge_recall_micro": 0.8875,
+          "edge_f1_micro": 0.8875,
+          "edge_precision_macro": 0.797752808988764,
+          "edge_recall_macro": 0.797752808988764,
+          "edge_f1_macro": 0.797752808988764,
+          "mean_matching_distance_m": 12.179033088501068,
+          "trajectory_accuracy_mean": 0.8875,
+          "trajectory_exact_match_rate": 0.625,
+          "candidate_count_mean": 3.2375,
+          "processing_ms_per_observation": 0.26419374999022693
+        },
+        "sampling_interval_s": 120
+      }
+    ]
+  },
+  "integrity": {
+    "test_sampling_intervals_s": [
+      1,
+      5,
+      15,
+      30,
+      45,
+      60,
+      120
+    ],
+    "raw_and_synthetic_v2_modified": false,
+    "reference_results_modified": false,
+    "radius_label_files_read": false
+  }
+}

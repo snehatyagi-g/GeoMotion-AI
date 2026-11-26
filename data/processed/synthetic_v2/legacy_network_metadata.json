@@ -1,0 +1,11 @@
+{
+  "coordinate_reference": "Inherited numeric coordinate frame from data/raw/delhi_road_network.csv; formal CRS remains unknown.",
+  "note": "This file is an audit-preserving augmented legacy network and is not the benchmark road network. Three synthetic counterparts share connected endpoint nodes but are not verified against original ground-truth geometry.",
+  "edge_ids_added": [
+    "E220",
+    "E355",
+    "E821"
+  ],
+  "raw_network_edges": 800,
+  "augmented_edges": 803
+}

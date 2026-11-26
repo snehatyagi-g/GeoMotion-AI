@@ -1,0 +1,11 @@
+{
+  "generated_coordinate_crs": "EPSG:4326",
+  "axis_order": [
+    "latitude",
+    "longitude"
+  ],
+  "metric_generation_method": "Local east/north tangent approximation per scenario origin; latitude scale 110540 m/degree and longitude scale 111320*cos(origin_latitude) m/degree.",
+  "distance_unit": "metre",
+  "raw_source_crs": "unknown; raw coordinates were not transformed or used to assert a CRS.",
+  "scenario_origin_method": "Grid of scenario origins within the numeric extent of the supplied study area; each synthetic map is a separate local world."
+}

@@ -1,0 +1,141 @@
+{
+  "generated_at_utc": "2026-11-03T15:00:07.856Z",
+  "seed": 20261103,
+  "raw_directory": "data/raw",
+  "raw_files": [
+    {
+      "file": "adaptive_radius_ground_truth.csv",
+      "records": 7200,
+      "column_count": 9,
+      "column_names": "seq|lat_true|lon_true|edge_id_true|context|sigma_true_m|recommended_radius_m|min_ok_radius_m|max_ok_radius_m",
+      "inferred_types_json": "{\"seq\":\"numeric-like\",\"lat_true\":\"numeric-like\",\"lon_true\":\"numeric-like\",\"edge_id_true\":\"string/category\",\"context\":\"string/category\",\"sigma_true_m\":\"numeric-like\",\"recommended_radius_m\":\"numeric-like\",\"min_ok_radius_m\":\"numeric-like\",\"max_ok_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 439619,
+      "sha256": "481763cda56693e3c04ad240fc4d5b96e1e69898c22240693752046f6b6df4b7"
+    },
+    {
+      "file": "delhi_ground_truth_90km.csv",
+      "records": 7200,
+      "column_count": 9,
+      "column_names": "trajectory_id|seq|lat|lon|altitude_m|timestamp|edge_id|speed_kmh|heading_deg",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"edge_id\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 538254,
+      "sha256": "24ba22af85eed55e3904dac9f856f3b845b7a0018a655054ed46aff40ac27f21"
+    },
+    {
+      "file": "delhi_road_network.csv",
+      "records": 800,
+      "column_count": 14,
+      "column_names": "edge_id|from_node|to_node|from_lat|from_lon|to_lat|to_lon|highway|length_m|speed_limit_kmh|oneway|bridge|tunnel|layer",
+      "inferred_types_json": "{\"edge_id\":\"string/category\",\"from_node\":\"string/category\",\"to_node\":\"string/category\",\"from_lat\":\"numeric-like\",\"from_lon\":\"numeric-like\",\"to_lat\":\"numeric-like\",\"to_lon\":\"numeric-like\",\"highway\":\"string/category\",\"length_m\":\"numeric-like\",\"speed_limit_kmh\":\"numeric-like\",\"oneway\":\"numeric-like\",\"bridge\":\"numeric-like\",\"tunnel\":\"numeric-like\",\"layer\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 69255,
+      "sha256": "d828ba11cf5686996ab3f68bee0ac712948d81d15281b4e4fa00a26c6d8241b8"
+    },
+    {
+      "file": "road_context_flags.csv",
+      "records": 800,
+      "column_count": 7,
+      "column_names": "edge_id|highway|urban_canyon|complex_intersection|road_density_class|avg_nearby_edges_within_100m|signal_count",
+      "inferred_types_json": "{\"edge_id\":\"string/category\",\"highway\":\"string/category\",\"urban_canyon\":\"numeric-like\",\"complex_intersection\":\"numeric-like\",\"road_density_class\":\"string/category\",\"avg_nearby_edges_within_100m\":\"numeric-like\",\"signal_count\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 24404,
+      "sha256": "547bd4e585a3da04631915bb87af537e2b0c18bb99a4eb88f005e2b127aa38b3"
+    },
+    {
+      "file": "segment_summary.csv",
+      "records": 8,
+      "column_count": 8,
+      "column_names": "seg_id|name|start_seq|end_seq|length_km|road_class_main|avg_speed_kmh|dominant_context",
+      "inferred_types_json": "{\"seg_id\":\"string/category\",\"name\":\"string/category\",\"start_seq\":\"numeric-like\",\"end_seq\":\"numeric-like\",\"length_km\":\"numeric-like\",\"road_class_main\":\"string/category\",\"avg_speed_kmh\":\"numeric-like\",\"dominant_context\":\"string/category\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 591,
+      "sha256": "d43b8fe0c23489495e82896c18157e8cb7ed7183f88411839d80d474814c75f0"
+    },
+    {
+      "file": "traj_dt_1s.csv",
+      "records": 7200,
+      "column_count": 15,
+      "column_names": "trajectory_id|user_id|seq|lat|lon|altitude_m|timestamp|speed_kmh|heading_deg|sigma_m|is_noisy|n_nearby_roads|road_density_class|context|recommended_radius_m",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"user_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\",\"sigma_m\":\"numeric-like\",\"is_noisy\":\"numeric-like\",\"n_nearby_roads\":\"numeric-like\",\"road_density_class\":\"string/category\",\"context\":\"string/category\",\"recommended_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 744450,
+      "sha256": "b33d83b1fd0f2800d975555272efb5ea8a671d58538056bc5f16bd958b3b1e0d"
+    },
+    {
+      "file": "traj_dt_5s.csv",
+      "records": 1440,
+      "column_count": 15,
+      "column_names": "trajectory_id|user_id|seq|lat|lon|altitude_m|timestamp|speed_kmh|heading_deg|sigma_m|is_noisy|n_nearby_roads|road_density_class|context|recommended_radius_m",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"user_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\",\"sigma_m\":\"numeric-like\",\"is_noisy\":\"numeric-like\",\"n_nearby_roads\":\"numeric-like\",\"road_density_class\":\"string/category\",\"context\":\"string/category\",\"recommended_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 149342,
+      "sha256": "a7930ea4e748a26fa36d3bbbbeb20614572f8f5a76121a406e5880f8f5ac4940"
+    },
+    {
+      "file": "traj_dt_15s.csv",
+      "records": 480,
+      "column_count": 15,
+      "column_names": "trajectory_id|user_id|seq|lat|lon|altitude_m|timestamp|speed_kmh|heading_deg|sigma_m|is_noisy|n_nearby_roads|road_density_class|context|recommended_radius_m",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"user_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\",\"sigma_m\":\"numeric-like\",\"is_noisy\":\"numeric-like\",\"n_nearby_roads\":\"numeric-like\",\"road_density_class\":\"string/category\",\"context\":\"string/category\",\"recommended_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 50515,
+      "sha256": "aa1fad158f8e13bc9b09704fa5f0f3e851a23ba802a3d2170d32b004550224cf"
+    },
+    {
+      "file": "traj_dt_30s.csv",
+      "records": 240,
+      "column_count": 15,
+      "column_names": "trajectory_id|user_id|seq|lat|lon|altitude_m|timestamp|speed_kmh|heading_deg|sigma_m|is_noisy|n_nearby_roads|road_density_class|context|recommended_radius_m",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"user_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\",\"sigma_m\":\"numeric-like\",\"is_noisy\":\"numeric-like\",\"n_nearby_roads\":\"numeric-like\",\"road_density_class\":\"string/category\",\"context\":\"string/category\",\"recommended_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 25331,
+      "sha256": "656f43a4d2ddb670fdb77dc534d562b9080e1f97cdb3f8317b48a178eab72cf5"
+    },
+    {
+      "file": "traj_dt_45s.csv",
+      "records": 160,
+      "column_count": 15,
+      "column_names": "trajectory_id|user_id|seq|lat|lon|altitude_m|timestamp|speed_kmh|heading_deg|sigma_m|is_noisy|n_nearby_roads|road_density_class|context|recommended_radius_m",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"user_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\",\"sigma_m\":\"numeric-like\",\"is_noisy\":\"numeric-like\",\"n_nearby_roads\":\"numeric-like\",\"road_density_class\":\"string/category\",\"context\":\"string/category\",\"recommended_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 16936,
+      "sha256": "cd559c4ff19c3d2bcaf09a1dacf8fc6005a98deed8e29b45a8ff273df447376e"
+    },
+    {
+      "file": "traj_dt_60s.csv",
+      "records": 120,
+      "column_count": 15,
+      "column_names": "trajectory_id|user_id|seq|lat|lon|altitude_m|timestamp|speed_kmh|heading_deg|sigma_m|is_noisy|n_nearby_roads|road_density_class|context|recommended_radius_m",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"user_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\",\"sigma_m\":\"numeric-like\",\"is_noisy\":\"numeric-like\",\"n_nearby_roads\":\"numeric-like\",\"road_density_class\":\"string/category\",\"context\":\"string/category\",\"recommended_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 12746,
+      "sha256": "9fdf2ed9a9188114a00bce9945b592894d930990eed9c013c186424921b5efee"
+    },
+    {
+      "file": "traj_dt_120s.csv",
+      "records": 60,
+      "column_count": 15,
+      "column_names": "trajectory_id|user_id|seq|lat|lon|altitude_m|timestamp|speed_kmh|heading_deg|sigma_m|is_noisy|n_nearby_roads|road_density_class|context|recommended_radius_m",
+      "inferred_types_json": "{\"trajectory_id\":\"string/category\",\"user_id\":\"string/category\",\"seq\":\"numeric-like\",\"lat\":\"numeric-like\",\"lon\":\"numeric-like\",\"altitude_m\":\"numeric-like\",\"timestamp\":\"string/category\",\"speed_kmh\":\"numeric-like\",\"heading_deg\":\"numeric-like\",\"sigma_m\":\"numeric-like\",\"is_noisy\":\"numeric-like\",\"n_nearby_roads\":\"numeric-like\",\"road_density_class\":\"string/category\",\"context\":\"string/category\",\"recommended_radius_m\":\"numeric-like\"}",
+      "missing_cells": 0,
+      "duplicate_excess_rows": 0,
+      "bytes": 6516,
+      "sha256": "ed5dcc88fcb65b296eb186dc0bfa8b955655fa8e18bbd4a951a192c9bd448da8"
+    }
+  ],
+  "preservation_check": "Hashes are rechecked by automated validation tests after generation.",
+  "generation_code": "scripts/build_synthetic_v2.mjs"
+}

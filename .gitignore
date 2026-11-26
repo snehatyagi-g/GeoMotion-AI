@@ -1,0 +1,29 @@
+# Python bytecode and interpreter caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment variables and Streamlit secrets
+.env
+.streamlit/secrets.toml
+
+# Editor and test artifacts
+.vscode/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.bak
+*.log
+
+# Source data and local analysis reports are not needed by the dashboard
+data/raw/
+reports/

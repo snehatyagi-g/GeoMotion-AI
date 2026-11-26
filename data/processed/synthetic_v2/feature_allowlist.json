@@ -1,0 +1,58 @@
+{
+  "row_keys_metadata_only_not_predictors": [
+    "scenario_id",
+    "trajectory_id",
+    "split",
+    "sampling_interval_s",
+    "seq",
+    "timestamp"
+  ],
+  "observation_predictor_allowlist": [
+    "lat",
+    "lon",
+    "sigma_m",
+    "speed_kmh",
+    "heading_deg"
+  ],
+  "network_predictor_allowlist": [
+    "geometry_wkt",
+    "length_m",
+    "highway",
+    "speed_limit_kmh",
+    "oneway",
+    "bridge",
+    "tunnel",
+    "layer",
+    "nearby_edge_count_100m",
+    "road_density_class",
+    "layer_count_100m",
+    "nearest_candidate_distance_m",
+    "second_candidate_distance_m",
+    "local_complexity_score"
+  ],
+  "network_identifiers_and_generation_metadata_not_predictors": [
+    "scenario_id",
+    "edge_id",
+    "from_node",
+    "to_node",
+    "source_kind",
+    "scenario_type"
+  ],
+  "prohibited_target_or_truth_columns": [
+    "lat_true",
+    "lon_true",
+    "edge_id_true",
+    "min_ok_radius_m",
+    "recommended_radius_m",
+    "max_ok_radius_m",
+    "evaluation_metrics"
+  ],
+  "scenario_manifest_not_predictors": [
+    "scenario_type",
+    "gps_noise_tier",
+    "replicate",
+    "split",
+    "seed"
+  ],
+  "feature_provenance_rule": "Map features are derived from the noisy observation and scenario-specific network only; generation code does not pass truth rows to feature derivation. Keys and scenario metadata are never model predictors."
+}
